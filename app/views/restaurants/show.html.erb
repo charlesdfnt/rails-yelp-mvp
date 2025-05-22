@@ -1,0 +1,17 @@
+<div class="container py-5">
+  <div class="text-center">
+    <h1><%= @restaurant.name %></h1>
+  </div>
+  <div class="text-center">
+    <p><%= @restaurant.address %></p>
+  </div>
+  <div>
+  <%= @review.each %>
+  </div>
+  <div class="text-center">
+    <p><%= link_to "add a new review", new_restaurant_review_path(@restaurant) %></p>
+  </div>
+  <div class="text-center">
+    <%= link_to "BACK TO ALL RESTAURANTS", restaurants_path, class:"btn btn-primary" %>
+  </div>
+</div>
